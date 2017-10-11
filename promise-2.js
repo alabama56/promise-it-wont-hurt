@@ -8,20 +8,21 @@
 
 'use strict';
 
-var promise = new Promise(function (fulfill, reject) {
-  // Your solution here
-  var data = ({value: "FULFILLED"});
-  console.log(data)
-  setTimeout(function(){
-    fulfill(data);
-  },300)
-    reject(err);
-});
-
+function myFunc() { 
+return new Promise(function (fulfill, reject) {
+  // Your solution here\
+    var data = ("FULFILLED!");
+    console.log(data)
+    setTimeout(function(){
+        fulfill(data);
+    },300)
+        reject(err);
+    });
+}
 // Your solution here
-Promise()
+myFunc()
     .then(function(fufill){
         console.log(data);
     }, function(err) {
-        console.log(err);
+        console.error(err);
     });
